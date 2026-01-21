@@ -21,7 +21,7 @@ It includes detailed information on:
 3. Job posted date
 4. Job schedule type (eg: Full-time, Part-time, Internship, etc)
 5. Job via (eg: linkedin, indeed, upwork, etc)
-## Which are tha top 10 skills in data science jobs?
+## Which are the top 10 skills in data science jobs?
 ### 🔍 Skill: Power Query (ETL)
 
 📥 **Extract**
@@ -51,5 +51,13 @@ It includes detailed information on:
   
     <img width="1920" height="1080" alt="Screenshot (1009)" src="https://github.com/user-attachments/assets/38f4d799-44cd-4dfe-9ac1-95e64bb5ec01" />
 
-📊 **Analysis**
+### 📊 Analysis
+💡 **Insights**
+- As we can see for all the jobs postings spark and aws were the highest paying skills.
+- Also by the likelihood of skills sql and python were the most in demand skills.
+  
+  <img width="250" height="200" alt="9" src="https://github.com/user-attachments/assets/a3741a97-a744-4252-8b6a-96da828cd901" />
+  <img width="700" height="389" alt="8" src="https://github.com/user-attachments/assets/f17a1565-7c79-4b3d-964f-d7231720d343" />
+
+
   				
