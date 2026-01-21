@@ -53,10 +53,80 @@ The dataset includes detailed information on:
         DScJobs[salary_year_avg]))
 
 ```
+-  🔨 **Multi criteria fiter:** Checks for job titles,saalary whether its empty or not, job country and job schedule type.
+-  🔩  **Array formula:** Uses MEDIAN() with nested IF() statement to analyse the statement.
+-  📝 **Tailored Insights:** Summarizes specific salary info according to job titles, job type and job country.
+-  🎯 **formula purpose:** This formula populates the table below, returning the median salary based on job title, country, and type specified.
 
-
-
-
-
-
+📖 Table overview
  
+ <img width="300" height="220" alt="1" src="https://github.com/user-attachments/assets/94507938-fd0e-4df4-b479-4bf07b9c1e05" />
+
+📜 Dashboard overview
+
+<img width="400" height="450" alt="2" src="https://github.com/user-attachments/assets/506d3279-a4b1-4ac9-aadc-fedc5acd955d" />
+
+
+⌚ **Unique Job Schedule Type** 
+
+```
+=UNIQUE(DScJobs[job_schedule_type])
+
+```
+
+📊 Table overview
+
+<img width="180" height="420" alt="3" src="https://github.com/user-attachments/assets/6a9f8300-1df2-4756-bdda-698988970e1f" />
+
+```
+
+=FILTER(P2#,NOT(ISNUMBER(SEARCH("and",P2#)))*(P2#<>0))
+
+```
+
+👀 Explanation
+
+- P2# refers to a dynamic array spilled from cell P2.
+- SEARCH("and", P2#) checks each value in the array for the word "and".
+- ISNUMBER(...) returns TRUE if the word "and" is found.
+- NOT(...) excludes any values that contain the word "and".
+- (P2# <> 0) removes zero values from the results.
+- FILTER(...) returns only the values that do not contain "and" and are not equal to zero.
+
+```
+
+=SORT(FILTER(Q2:R6,ISNUMBER(R2:R6)),2,-1)
+
+```
+👀 Explanation
+
+- Q2:R6 is the data range being analyzed (two columns of related data).
+- ISNUMBER(R2:R6) checks which cells in column R contain numeric values.
+- FILTER(Q2:R6, ...) keeps only the rows where column R has valid numbers.
+- SORT(..., 2, -1) sorts the filtered data:
+- 2 → sorts by the second column (column R)
+- 1 → sorts values in descending order
+
+
+
+📊 Table overview
+
+<img width="330" height="120" alt="4" src="https://github.com/user-attachments/assets/81c18d1a-067a-4e2e-b701-464ae9303267" />
+
+📰  Dashboard overview
+
+<img width="500" height="450" alt="5" src="https://github.com/user-attachments/assets/768795ad-8679-4cb3-8245-f2c61a75cc42" />
+
+
+### 🔍 Filtered List & Data Validation
+
+- 🔒 **Enhanced Data Validation:** The filtered list is applied as a data validation rule for the **Job Title**, **Country**, and **Type** fields using Excel’s Data Validation feature.
+- 🎯 **Controlled Input:** Restricts user selections to predefined, validated options only.
+- 🚫 **Error Prevention:** Prevents incorrect or inconsistent data entries.
+- 👥 **Improved Usability:** Enhances the overall user experience and reliability of the dashboard.
+
+## 🧾 Conclusion
+
+This dashboard was created to highlight key salary trends across a range of data-related job roles. Using data sourced from my Excel course, the dashboard enables users to explore and compare compensation patterns with confidence.
+
+By interacting with the dashboard, users can better understand how factors such as **job title**, **location**, and **employment type** influence salary levels, supporting more informed career decisions.
